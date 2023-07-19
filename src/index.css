@@ -1,0 +1,49 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+    --primary-dark:#379237;
+    --primary-light:#82CD47;
+}
+
+.icon{
+    color: var(--primary-dark);
+}
+.zoom-in-out {
+    animation: zoomInOut 0.3s infinite alternate;
+    transition: transform 0.1s ease;
+    /* Change the duration (3s) as needed */
+  }
+  
+  @keyframes zoomInOut {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.2); /* Change the scale value (1.2) for desired zoom level */
+    }
+  }
+@layer base {
+    body{
+        @apply font-[Poppins]  }
+    h1{
+        @apply p-4 text-3xl font-bold md:text-4xl
+    }
+    h2{
+        @apply text-2xl font-bold md:text-3xl
+    }
+li{
+    @apply px-5 
+}
+.icon{
+    @apply text-2xl cursor-pointer
+}
+button{ 
+    @apply bg-gradient-to-r from-[var(--primary-dark)] to-[var(--primary-light)] }
+
+    
+}
